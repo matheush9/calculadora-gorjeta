@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Gorjeta</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="main">
+    <img src="/icon/logo.svg">
+
+    <div class="box">
+      <div class="input-side">
+
+        <label>
+          <span>Valor da conta:</span>
+          <input min="0" max="99999999" oninput="armazena()" placeholder="0" type="number" id="bill" onKeyPress="if(this.value.length==8) return false;">
+        </label>
+        
+        <label>
+          <span>Porcentagem da gorjeta %:</span>
+          <input min="0" max="999" placeholder="0" oninput="armazena()" type="number" id="inputTip" onKeyPress="if(this.value.length==3) return false;">
+        </label>
+
+        <label>
+          <span>Número de pessoas:</span>
+          <input min="0" max="99999999" value="1" oninput="armazena()" type="number" id="num-people" onKeyPress="if(this.value.length==8) return false;">
+        </label>
+
+        
+      </div>
+      <div class="flex-container">
+        <div class="output-side">
+
+          <div class="valorG">
+            <p>Valor gorjeta:<br><span> / pessoa</span></p>
+            <p class="moneyfont">$<span id="amount">0.00</p>
+          </div>
+          <div class="total">
+            <p>Total:<br><span> / pessoa</span></p>
+            <p class="moneyfont">$<span id="totalG">0.00</p>
+          </div>
+          <div class="totalG">
+            <p>Valor total<br> com gorjeta:</p>
+            <p class="moneyfont">$<span id="total">0.00</p>
+          </div>
+
+
+        </div>
+        <button id="reset">RESETAR</button>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </div>
+</body>
+
+</html>

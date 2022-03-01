@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(185, 41%, 84%);
+  font-family: "Space Mono", monospace;
+  min-height: 100vh;
+}
+img {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 4vh 0;
+}
+.box {
+  background-color: white;
+  border-radius: 15px;
+  padding: 6vw;
+}
+.input-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 4vh;
+  margin-bottom: 4vh;
+}
+.input-side label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.input-side span {
+  color: hsl(186, 14%, 43%);
+  font-weight: bold;
+  margin-bottom: 1vh;
+}
+.input-side p {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: hsl(183, 100%, 15%, 0.822);
+}
+.flex-container {
+  color: white;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 15px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 6vh;
+}
+.output-side {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4vh;
+  word-wrap: break-word;
+}
+.output-side span {
+  font-size: 0.8rem;
+  color: hsl(184, 14%, 56%);
+}
+.moneyfont,
+.moneyfont span {
+  font-size: 1.8rem;
+  color: hsl(172, 67%, 45%);
+  font-weight: bold;
+}
+.output-side div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+button {
+  color: hsl(183, 100%, 15%);
+  font-weight: bold;
+  font-family: "Space Mono", monospace;
+  font-size: 1.1rem;
+  padding: 3vw;
+  background-color: hsl(172, 67%, 45%);
+  border: none;
+  border-radius: 6px;
+}
+button:hover {
+  transition: 0.5s;
+  background-color: hsl(172, 41%, 72%);
+  cursor: pointer;
+}
+input {
+  background-color: hsl(180, 21%, 93%);
+  border: none;
+  padding: 1vh;
+  border-radius: 6px;
+  outline: none;
+}
+input:focus {
+  outline: 3px solid hsl(172, 67%, 45%);
+}
+input[type="number"] {
+  font-family: "Space Mono", monospace;
+  font-weight: bold;
+  color: hsl(183, 100%, 15%);
+  font-size: 1.1rem;
+}
+
+@media (min-width: 720px) {
+  img {
+    transform: none;
+    position: static;
+    margin: 0;
+  }
+  .main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 8vh;
+  }
+  .box {
+    display: flex;
+    padding: 2vw;
+    column-gap: 3vw;
+  }
+  .flex-container {
+    display: flex;
+    padding: 3vw;
+    justify-content: space-between;
+  }
+  button {
+    padding: 1vh;
+  }
+  .input-side {
+    justify-content: space-around;
+    margin: 0;
+  }
+  .output-side {
+    width: 30vw;
+  }
+}
